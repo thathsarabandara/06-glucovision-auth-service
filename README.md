@@ -7,7 +7,7 @@
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-Python-009688?style=for-the-badge&logo=fastapi)](#)
 [![Redis](https://img.shields.io/badge/Redis-Token%20Store-DC382D?style=for-the-badge&logo=redis)](#)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Credentials-4169E1?style=for-the-badge&logo=postgresql)](#)
+[![MySQL](https://img.shields.io/badge/MySQL-Credentials-4169E1?style=for-the-badge&logo=mysql)](#)
 [![Docker](https://img.shields.io/badge/Docker-Containerised-2496ED?style=for-the-badge&logo=docker)](#)
 [![Status](https://img.shields.io/badge/Status-In%20Development-f59e0b?style=for-the-badge)](#)
 
@@ -66,7 +66,7 @@ GlucoVision Auth Service is the **security-critical authentication and authoriza
 ### Prerequisites
 
 - Python ≥ 3.11
-- PostgreSQL ≥ 15
+- MySQL ≥ 15
 - Redis ≥ 7
 - Docker & Docker Compose
 
@@ -98,7 +98,7 @@ docker compose up --build
 | OAuth2 | authlib |
 | TOTP | pyotp |
 | Token Store | Redis (redis-py) |
-| Database | PostgreSQL (SQLAlchemy + Alembic) |
+| Database | MySQL (SQLAlchemy + Alembic) |
 | Containerisation | Docker |
 
 ---
@@ -112,7 +112,7 @@ docker compose up --build
 | Google / Apple OAuth | External IdP for social login |
 | SMTP / SendGrid | Email verification, password reset |
 | Redis | Token blacklist, session state |
-| PostgreSQL | User credential store |
+| MySQL | User credential store |
 
 ---
 
