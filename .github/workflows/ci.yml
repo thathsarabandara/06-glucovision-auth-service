@@ -1,0 +1,28 @@
+name: 06-glucovision-auth-service CI/CD
+
+on:
+  push:
+    paths:
+      - '06-glucovision-auth-service/**'
+      - '.github/workflows/06-glucovision-auth-service-ci.yml'
+  pull_request:
+    paths:
+      - '06-glucovision-auth-service/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and Push (Dry Run)
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false
+          tags: glucovision/06-glucovision-auth-service:test
